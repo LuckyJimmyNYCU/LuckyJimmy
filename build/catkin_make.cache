@@ -1,0 +1,2 @@
+upguided
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/exp/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/exp/install -G Unix Makefiles

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="SYS_ID" default="2"/>
+        <arg name="node_start_delay" default="22"/>
+    <group ns="MAV$(arg SYS_ID)">
+        <param name="UAV_ID" value="$(arg SYS_ID)"/>
+
+        <!-- Connect Orin to MAVROS and ground station -->
+
+	<node pkg= "upguided" type="arm" name="arm" output="screen" />
+	</group>
+		<!-- Node to control  drone -->
+        <!--node pkg="upguided" type="velocity.py" name="velocity_py" required="true" output="screen" /-->
+        <!--node pkg="upguided" type="main_iris_beta.py" name="main_iris_py" required="true" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/-->
+        <!-- yolov7_ros -->
+        <!-- <include file="$(find yolov7_ros)/launch/yolov7.launch">
+            </include> -->
+
+</launch>
+
